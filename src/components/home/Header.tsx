@@ -42,12 +42,12 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-smooth"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-smooth font-inter"
               >
                 {item.name}
               </a>
             ))}
-            <Button variant="default" className="ml-4">
+            <Button variant="default" className="ml-4 font-inter">
               Nous rejoindre
             </Button>
           </nav>
