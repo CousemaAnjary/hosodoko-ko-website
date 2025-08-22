@@ -30,7 +30,7 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="Hosodoko-ko logo"
-              width={180}
+              width={190}
               height={100}
               className="mt-2"
             />
