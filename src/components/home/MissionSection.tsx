@@ -9,28 +9,32 @@ export default function MissionSection() {
     {
       icon: Lightbulb,
       title: "Valoriser les déchets",
-     description: "Transformer les déchets en œuvres d'arts originaux et inspirants, révélant leur potentiel esthétique et leur message environnemental.",
+      description:
+        "Transformer les déchets en œuvres d'arts originaux et inspirants, révélant leur potentiel esthétique et leur message environnemental.",
       color: "text-yellow-600",
       bgColor: "bg-yellow-50",
     },
     {
       icon: Users,
-      title: "Promouvoir l&apos;écoresponsabilité",
-      description: "Sensibiliser à travers des approches ludiques et créatives pour développer une conscience environnementale durable.",
+      title: "Promouvoir l'écoresponsabilité",
+      description:
+        "Sensibiliser à travers des approches ludiques et créatives pour développer une conscience environnementale durable.",
       color: "text-green-600",
       bgColor: "bg-green-50",
     },
     {
       icon: Network,
       title: "Fédérer un réseau",
-      description: "Rassembler les acteurs locaux pour co-construire et déployer des initiatives innovantes de gestion des déchets.",
+      description:
+        "Rassembler les acteurs locaux pour co-construire et déployer des initiatives innovantes de gestion des déchets.",
       color: "text-blue-600",
       bgColor: "bg-blue-50",
     },
     {
       icon: BookOpen,
       title: "Diffuser les connaissances",
-      description: "Partager les bonnes pratiques en matière de gestion des déchets pour promouvoir une culture de responsabilité environnementale.",
+      description:
+        "Partager les bonnes pratiques en matière de gestion des déchets pour promouvoir une culture de responsabilité environnementale.",
       color: "text-purple-600",
       bgColor: "bg-purple-50",
     },
@@ -51,12 +55,13 @@ export default function MissionSection() {
       <div className="container mx-auto px-4">
         {/* En-tête de section */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-gray-900 font-">
             Notre Mission
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            <span className="font-semibold text-blue-600">
-              « Être une référence de la gestion des déchets{" "}
+            «{" "}
+            <span className="font-semibold text-blue-600 font-inter">
+             Être une référence de la gestion des déchets{" "}
             </span>
             et dans l&apos;éducation environnementale avec une approche
             participative et inclusive »
@@ -80,7 +85,7 @@ export default function MissionSection() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors font-inter">
                       {mission.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
