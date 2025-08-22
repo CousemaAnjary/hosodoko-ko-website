@@ -1,5 +1,6 @@
 "use client"
 
+import GallerySection from "@/src/components/home/GallerySection"
 import Header from "@/src/components/home/Header"
 import HeroSection from "@/src/components/home/HeroSection"
 import MissionSection from "@/src/components/home/MissionSection"
@@ -21,8 +22,8 @@ export default function page() {
       <Header />
       <HeroSection />
       <MissionSection />
-      {/* <ActivitiesSection />
       <GallerySection />
+      {/* <ActivitiesSection />
       <Footer /> */}
     </div>
   )
