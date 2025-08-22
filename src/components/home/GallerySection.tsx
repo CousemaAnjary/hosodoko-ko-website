@@ -67,7 +67,7 @@ export default function GallerySection() {
         {/* En-tête */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Art avec Impact
+            Art avec Impact : nos sculptures
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
             Découvrez nos sculptures qui transforment les déchets en messages
