@@ -1,11 +1,17 @@
-import { Eye } from "lucide-react"
+import { Eye, X } from "lucide-react"
 import Image from "next/image"
-
+import { useState } from "react"
 
 export default function GallerySection() {
   /**
    * ! STATE (état, données) de l'application
    */
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string
+    alt: string
+    title: string
+    category: string
+  } | null>(null)
   const galleryImages = [
     {
       id: 1,
@@ -54,6 +60,18 @@ export default function GallerySection() {
   /**
    * ! COMPORTEMENT (méthodes, fonctions) de l'application
    */
+  const openImage = (image: {
+    src: string
+    alt: string
+    title: string
+    category: string
+  }) => {
+    setSelectedImage(image)
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+  }
 
   /**
    * ! AFFICHAGE (render) de l'application
@@ -67,7 +85,7 @@ export default function GallerySection() {
         {/* En-tête */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Art avec Impact : nos sculptures
+            Art avec Impact : nos sculpture
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
             Découvrez nos sculptures qui transforment les déchets en messages
@@ -79,7 +97,10 @@ export default function GallerySection() {
         <div className="relative rounded-3xl overflow-hidden bg-black p-8 shadow-2xl">
           {/* Image principale à gauche */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
-            <div className="lg:col-span-6 relative group cursor-pointer overflow-hidden rounded-2xl">
+            <div
+              className="lg:col-span-6 relative group cursor-pointer overflow-hidden rounded-2xl"
+              onClick={() => openImage(galleryImages[0])}
+            >
               <Image
                 src="/images/gallery-1.jpg"
                 alt="Poisson coloré créé à partir de matériaux recyclés"
@@ -96,6 +117,11 @@ export default function GallerySection() {
                   d&apos;espoir
                 </p>
               </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                  <Eye className="w-8 h-8 text-white" />
+                </div>
+              </div>
             </div>
 
             {/* Grille d'images à droite */}
@@ -106,6 +132,7 @@ export default function GallerySection() {
                   className={`relative group cursor-pointer overflow-hidden rounded-xl transition-all duration-300 hover:scale-105 ${
                     index === 0 || index === 3 ? "row-span-2" : ""
                   }`}
+                  onClick={() => openImage(image)}
                 >
                   <Image
                     src={image.src}
@@ -140,6 +167,41 @@ export default function GallerySection() {
           </Button>
         </div> */}
       </div>
+
+      {/* Modal pour affichage en grand */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
+            {/* Bouton fermer */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/30 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Image en grand */}
+            <div className="relative w-full h-[70vh] rounded-2xl overflow-hidden">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            {/* Informations de l'image */}
+            <div className="mt-4 text-center text-white">
+              <h3 className="text-2xl font-bold mb-2">{selectedImage.title}</h3>
+              <p className="text-lg text-white/80">{selectedImage.category}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
