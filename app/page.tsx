@@ -2,6 +2,7 @@
 
 import Header from "@/src/components/home/Header"
 import HeroSection from "@/src/components/home/HeroSection"
+import MissionSection from "@/src/components/home/MissionSection"
 
 export default function page() {
   /**
@@ -19,8 +20,8 @@ export default function page() {
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      {/* <MissionSection />
-      <ActivitiesSection />
+      <MissionSection />
+      {/* <ActivitiesSection />
       <GallerySection />
       <Footer /> */}
     </div>
