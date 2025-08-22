@@ -1,6 +1,6 @@
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { Button } from "../ui/button"
-import { Menu, X } from "lucide-react"
 
 export default function Header() {
   /**
@@ -12,11 +12,9 @@ export default function Header() {
    * ! COMPORTEMENT (méthodes, fonctions) de l'application
    */
   const navigation = [
-    { name: "Accueil", href: "#accueil" },
-    { name: "Mission", href: "#mission" },
-    { name: "Activités", href: "#activites" },
-    { name: "Galerie", href: "#galerie" },
-    { name: "Contact", href: "#contact" },
+    { name: "Qui sommes-nous ?", href: "#qui-sommes-nous" },
+    { name: "Ce que nous faisons", href: "#ce-que-nous-faisons" },
+    { name: "Impliquez-vous", href: "#impliquez-vous" },
   ]
 
   /**
