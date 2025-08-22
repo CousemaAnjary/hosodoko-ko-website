@@ -55,6 +55,13 @@ export default function GallerySection() {
       title: "Mur Artistique",
       category: "Art Mural",
     },
+    {
+      id: 7,
+      src: "/images/gallery-1.jpg",
+      alt: "Art mural recyclé",
+      title: "Mur Artistique",
+      category: "Art Mural",
+    },
   ]
 
   /**
@@ -94,7 +101,7 @@ export default function GallerySection() {
         </div>
 
         {/* Grille galerie moderne */}
-        <div className="relative rounded-3xl overflow-hidden bg-black p-8 shadow-2xl">
+        <div className="relative rounded-3xl overflow-hidden  p-8 ">
           {/* Image principale à gauche */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
             <div
