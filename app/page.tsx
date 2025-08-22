@@ -1,5 +1,6 @@
 "use client"
 
+import ActivitiesSection from "@/src/components/home/ActivitiesSection"
 import Footer from "@/src/components/home/Footer"
 import GallerySection from "@/src/components/home/GallerySection"
 import Header from "@/src/components/home/Header"
@@ -24,6 +25,7 @@ export default function page() {
       <HeroSection />
       <MissionSection />
       <GallerySection />
+      <ActivitiesSection />
       <Footer />
     </div>
   )

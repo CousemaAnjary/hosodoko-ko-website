@@ -15,7 +15,6 @@ export default function Header() {
   const navigation = [
     { name: "Qui sommes-nous ?", href: "#qui-sommes-nous" },
     { name: "Ce que nous faisons", href: "#ce-que-nous-faisons" },
-    { name: "Impliquez-vous", href: "#impliquez-vous" },
   ]
 
   /**
