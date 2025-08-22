@@ -49,7 +49,7 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed font-inter">
             Hosodoko-ko transforme les déchets en œuvres d&apos;art inspirantes
             pour sensibiliser à la protection de l&apos;environnement et
-            promouvoir l&apos;écocitoyenneté.
+            promouvoir l&apos;écocitoyenneté
           </p>
 
           {/* Statistiques rapides */}
