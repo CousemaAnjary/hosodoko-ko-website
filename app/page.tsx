@@ -1,6 +1,7 @@
 "use client"
 
 import Header from "@/src/components/home/Header"
+import HeroSection from "@/src/components/home/HeroSection"
 
 export default function page() {
   /**
@@ -17,8 +18,8 @@ export default function page() {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* <HeroSection />
-      <MissionSection />
+      <HeroSection />
+      {/* <MissionSection />
       <ActivitiesSection />
       <GallerySection />
       <Footer /> */}
